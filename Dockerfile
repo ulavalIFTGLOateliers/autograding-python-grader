@@ -10,6 +10,12 @@ RUN apt-get update \
  && apt-get install coreutils -y \
  && rm -rf /var/lib/apt/lists/*
 
+ENV PORT=1521
+ENV USER=my_user
+ENV PASSWORD=password
+ENV HOST=localhost
+ENV SERVICE_NAME=FREEPDB1
+
 COPY . /opt/test-runner
 
 WORKDIR /opt/test-runner
